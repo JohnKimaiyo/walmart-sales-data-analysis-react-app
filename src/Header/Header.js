@@ -40,14 +40,57 @@ export default function Header() {
           </td>
         </tr>
       </table>
-      <a
-          className="App-link"
-          href="https://docs.google.com/spreadsheets/d/1ETQQwPaX8kMLgqIBLBulHTQiVk_nMf0rXOLxm4UnLko/edit#gid=0"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View the Dashboard Here
-        </a>
+
+
+<h2>Download Links Section</h2>
+      <table>
+        <tr>
+          <th>Page Routes </th>
+          <th>Description of the Pages</th>
+          <th>URL Links</th>
+        </tr>
+        <tr>
+          <td>Visualised Data</td>
+          <td>PDF file containing the Sales Vialualised Data</td>
+
+          <td>
+            <a
+              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View the Dashboard Here
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>SQL Queries</td>
+          <td>Checkout sql statement to clean up the data</td>
+          <td>
+            <a
+              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to view the SQL scripts
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Walmart Source Files </td>
+          <td>Walmart Kaggle dataset</td>
+          <td>
+            <a
+            
+              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to down load the source files from kaggle
+            </a>
+          </td>
+        </tr>
+      </table>
     </div>
   );
 }
