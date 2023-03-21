@@ -26,8 +26,7 @@ export default function Header() {
             ore to
           </td>
           <td>
-            A Power BI dashboard which allows me to filter data for each
-            Product
+            A Power BI dashboard which allows me to filter data for each Product
           </td>
         </tr>
         <tr>
@@ -38,31 +37,32 @@ export default function Header() {
             ore to
           </td>
           <td>
-            A Power BI dashboard which allows me to filter data for each
-            Brand
+            A Power BI dashboard which allows me to filter data for each Brand
           </td>
         </tr>
         <tr>
           <td>Sales Representative</td>
-          <td>A detailed overview of  Sales per  Department</td>
+          <td>A detailed overview of Sales per Department</td>
           <td>Can follow up my Department that sells the most</td>
 
           <td>
-            A Power BI dashboard which allows me to filter data for each Department
+            A Power BI dashboard which allows me to filter data for each
+            Department
           </td>
-        </tr><tr>
+        </tr>
+        <tr>
           <td>Sales Representative</td>
-          <td>A detailed overview of  Sales per  Category</td>
+          <td>A detailed overview of Sales per Category</td>
           <td>Can follow up my Department that sells the most</td>
 
           <td>
-            A Power BI dashboard which allows me to filter data for each Category
+            A Power BI dashboard which allows me to filter data for each
+            Category
           </td>
         </tr>
       </table>
 
-
-<h2>Download Links Section</h2>
+      <h2>Download Links Section</h2>
       <table>
         <tr>
           <th>Page Routes </th>
@@ -71,11 +71,25 @@ export default function Header() {
         </tr>
         <tr>
           <td>Visualised Data</td>
-          <td>PDF file containing the Sales Visualised Data</td>
+          <td>Image file containing the Sales Visualised Data</td>
 
           <td>
             <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/Visual%20Report/Walamart%20Sales%20Analysis.pdf"
+              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/Visual%20Report/Walmart%20Sales%20Analysis.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View the Dashboard Here
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Visualised Data</td>
+          <td>Image containing the Sales Visualised Data in googleshet</td>
+
+          <td>
+            <a
+              href="https://docs.google.com/spreadsheets/d/1MKxM4zOPpnTVzHr1fEPb6r34Af3maUZgmDuAUo7GVCo/edit#gid=0"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -115,7 +129,6 @@ export default function Header() {
           <td>Walmart Kaggle dataset</td>
           <td>
             <a
-            
               href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
               target="_blank"
               rel="noopener noreferrer"
