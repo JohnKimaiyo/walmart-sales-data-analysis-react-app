@@ -137,6 +137,19 @@ export default function Header() {
             </a>
           </td>
         </tr>
+        <tr>
+          <td>Walmart JSON Files </td>
+          <td>Walmart JSON Dataset</td>
+          <td>
+            <a
+              href="https://raw.githubusercontent.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/main/src/Search%20App/wamart.json"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to down load the JSON file
+            </a>
+          </td>
+          </tr>
       </table>
     </div>
   );
