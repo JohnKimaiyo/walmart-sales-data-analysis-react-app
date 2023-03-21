@@ -51,7 +51,7 @@ export default function Header() {
         </tr>
         <tr>
           <td>Visualised Data</td>
-          <td>PDF file containing the Sales Vialualised Data</td>
+          <td>PDF file containing the Sales Visualised Data</td>
 
           <td>
             <a
