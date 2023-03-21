@@ -70,7 +70,7 @@ export default function Header() {
           <th>URL Links</th>
         </tr>
         <tr>
-          <td>Visualised Data</td>
+          <td>JPEG Visualised Data</td>
           <td>Image file containing the Sales Visualised Data</td>
 
           <td>
@@ -84,8 +84,8 @@ export default function Header() {
           </td>
         </tr>
         <tr>
-          <td>Visualised Data</td>
-          <td>Image containing the Sales Visualised Data in googleshet</td>
+          <td>Googlesheet  Visualised Data</td>
+          <td>Image containing the Sales Visualised Data in Googlesheet</td>
 
           <td>
             <a
@@ -98,7 +98,7 @@ export default function Header() {
           </td>
         </tr>
         <tr>
-          <td>Visualised Data</td>
+          <td>PDF Visualised Data</td>
           <td>PDF file containing the Sales Visualised Data</td>
 
           <td>
@@ -126,7 +126,7 @@ export default function Header() {
         </tr>
         <tr>
           <td>Walmart Source Files </td>
-          <td>Walmart Kaggle dataset</td>
+          <td>Walmart Kaggle Dataset</td>
           <td>
             <a
               href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
