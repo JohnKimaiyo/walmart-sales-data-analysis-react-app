@@ -116,7 +116,7 @@ export default function Header() {
           <td>Checkout sql statement to clean up the data</td>
           <td>
             <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
+              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/SQL%20Scripts/walmart.sql"
               target="_blank"
               rel="noopener noreferrer"
             >
