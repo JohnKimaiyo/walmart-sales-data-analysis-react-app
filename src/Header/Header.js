@@ -84,7 +84,7 @@ export default function Header() {
           </td>
         </tr>
         <tr>
-          <td>Googlesheet  Visualised Data</td>
+          <td>Googlesheet Visualised Data</td>
           <td>Image containing the Sales Visualised Data in Googlesheet</td>
 
           <td>
@@ -149,7 +149,20 @@ export default function Header() {
               Click here to down load the JSON file
             </a>
           </td>
-          </tr>
+        </tr>
+        <tr>
+          <td>Create JSON Files </td>
+          <td>Check out my Excel to JSON Converter app</td>
+          <td>
+            <a
+              href="https://excel-to-json-javascript-converter.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to convert Excel data to JSON Data
+            </a>
+          </td>
+        </tr>
       </table>
     </div>
   );
