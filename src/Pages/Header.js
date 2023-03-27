@@ -74,13 +74,7 @@ export default function Header() {
           <td>Image file containing the Sales Visualised Data</td>
 
           <td>
-            <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/Visual%20Report/Walmart%20Sales%20Analysis.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View the Dashboard Here
-            </a>
+           
           </td>
         </tr>
         <tr>
@@ -88,13 +82,7 @@ export default function Header() {
           <td>Image containing the Sales Visualised Data in Googlesheet</td>
 
           <td>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1MKxM4zOPpnTVzHr1fEPb6r34Af3maUZgmDuAUo7GVCo/edit#gid=0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View the Dashboard Here
-            </a>
+           
           </td>
         </tr>
         <tr>
@@ -102,65 +90,35 @@ export default function Header() {
           <td>PDF file containing the Sales Visualised Data</td>
 
           <td>
-            <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/Visual%20Report/Walamart%20Sales%20Analysis.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View the Dashboard Here
-            </a>
+            
           </td>
         </tr>
         <tr>
           <td>SQL Queries</td>
           <td>Checkout sql statement to clean up the data</td>
           <td>
-            <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/blob/main/src/SQL%20Scripts/walmart.sql"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Click here to view the SQL scripts
-            </a>
+           
           </td>
         </tr>
         <tr>
           <td>Walmart Source Files </td>
           <td>Walmart Kaggle Dataset</td>
           <td>
-            <a
-              href="https://github.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/tree/main/src/Visual%20Report"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Click here to down load the source files from kaggle
-            </a>
+          
           </td>
         </tr>
         <tr>
           <td>Walmart JSON Files </td>
           <td>Walmart JSON Dataset</td>
           <td>
-            <a
-              href="https://raw.githubusercontent.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/main/src/Search%20App/wamart.json"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Click here to down load the JSON file
-            </a>
+          
           </td>
         </tr>
         <tr>
           <td>Create JSON Files </td>
           <td>Check out my Excel to JSON Converter app</td>
           <td>
-            <a
-              href="https://excel-to-json-javascript-converter.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Click here to convert Excel data to JSON Data
-            </a>
+          
           </td>
         </tr>
       </table>
