@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "./Pages.css";
 export default function GoogleSheet() {
   return (
-    <div>
+    <div className="App">
       {" "}
       <a
         href="https://docs.google.com/spreadsheets/d/1MKxM4zOPpnTVzHr1fEPb6r34Af3maUZgmDuAUo7GVCo/edit#gid=0"

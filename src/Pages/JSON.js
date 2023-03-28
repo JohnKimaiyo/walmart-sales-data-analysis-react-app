@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./Pages.css";
 export default function JSON() {
   return (
-    <div>
+    <div className="App">
       JSON
       <a
         href="https://raw.githubusercontent.com/JohnKimaiyo/walmart-sales-data-analysis-react-app/main/src/Search%20App/wamart.json"
