@@ -47,7 +47,7 @@ export default function Render() {
               <tr key={index}>
                 <td>{row.Index}</td>
                 <td>{row.Shipping}</td>
-                <td>{row.Occupation}</td>
+                <td>{row.Department}</td>
                 <td>{row.Category}</td>
                 <td>{row.Age}</td>
                 <td>{row.Occupation}</td>
