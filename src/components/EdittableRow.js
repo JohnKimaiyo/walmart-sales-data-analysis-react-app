@@ -10,9 +10,9 @@ const EditableRow = ({
 
       <td>
         <input
-          type="text"
+          type="number"
           required="required"
-          placeholder="Enter a shipping..."
+          placeholder="Enter shipping number ..."
           name="shipping"
           value={editFormData.shipping}
           onChange={handleEditFormChange}
@@ -33,7 +33,7 @@ const EditableRow = ({
           type="text"
           required="required"
           placeholder="Enter a category..."
-          name="phoneNumber"
+          name="category"
           value={editFormData.category}
           onChange={handleEditFormChange}
         ></input>
@@ -43,7 +43,7 @@ const EditableRow = ({
           type="email"
           required="required"
           placeholder="Enter productname..."
-          name="email"
+          name="productname"
           value={editFormData.productname}
           onChange={handleEditFormChange}
         ></input>
@@ -53,7 +53,7 @@ const EditableRow = ({
           type="email"
           required="required"
           placeholder="Enter brand..."
-          name="email"
+          name="brand"
           value={editFormData.brand}
           onChange={handleEditFormChange}
         ></input>
@@ -63,7 +63,7 @@ const EditableRow = ({
           type="email"
           required="required"
           placeholder="Enter sales..."
-          name="email"
+          name="sales"
           value={editFormData.sales}
           onChange={handleEditFormChange}
         ></input>
@@ -73,7 +73,7 @@ const EditableRow = ({
           type="email"
           required="required"
           placeholder="Enter date..."
-          name="email"
+          name="date"
           value={editFormData.date}
           onChange={handleEditFormChange}
         ></input>

@@ -4,7 +4,7 @@ const ReadOnlyRow = ({ sale, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
       <td>{sale.shipping}</td>
-      <td>{sale.deaprtment}</td>
+      <td>{sale.department}</td>
       <td>{sale.category}</td>
       <td>{sale.productname}</td>
       <td>{sale.brand}</td>
