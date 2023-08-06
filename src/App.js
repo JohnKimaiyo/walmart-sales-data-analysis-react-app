@@ -2,8 +2,8 @@ import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
 import "./App.css";
 import data from "./mock-data.json";
-import ReadOnlyRow from "./components/ReadOnlyRow";
-import EditableRow from "./components/EditableRow";
+import ReadOnlyRow from "./components/EdittableRow";
+import EditableRow from "./components/ReadOnlyRows";
 
 const App = () => {
   const [sales, setSales] = useState(data);
@@ -11,9 +11,9 @@ const App = () => {
     shipping: "",
     department: "",
     category: "",
-    email: "",
-    category: '',
-    productName: "",
+    
+   
+    productname: "",
     brand: "",
     sales: "",
     date: '',
@@ -26,15 +26,14 @@ const App = () => {
     shipping: "",
     department: "",
     category: "",
-    email: "",
-    category: '',
-    productName: "",
+    
+    productname: "",
     brand: "",
     sales: "",
     date: '',
   });
 
-  const [editSalesIndex, setEditSalesId] = useState(null);
+  const [editSaleIndex, setEditSaleIndex] = useState(null);
 
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -63,7 +62,7 @@ const App = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
-    const newSales = {
+    const newSale = {
       index: nanoid(),
       shipping: addFormData.shipping,
       category: addFormData.category,
@@ -74,15 +73,15 @@ const App = () => {
 
     };
 
-    const newContacts = [...sales, newSales];
+    const newSales = [...sales, newSale];
     setSales(newSales);
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedSales = {
-      index: editSalesIndex,
+    const editedSale = {
+      index: editSaleIndex,
       shipping: editFormData.shipping,
       category: editFormData.category,
       productname: editFormData.productname,
@@ -94,26 +93,26 @@ const App = () => {
 
     const newSales = [...sales];
 
-    const index = sales.findIndex((sales) => sales.idex === editSalesIndex);
+    const index = sales.findIndex((sale) => sale.index === editSaleIndex);
 
-    newSales[index] = editedSales;
+    newSales[index] = editedSale;
 
     setSales(newSales);
-    setEditSalesIndex(null);
+    setEditSaleIndex(null);
   };
 
-  const handleEditClick = (event, sales) => {
+  const handleEditClick = (event, sale) => {
     event.preventDefault();
-    setEditSalesIndex(sales.index);
+    setEditSaleIndex(sales.index);
 
     const formValues = {
-      shipping: sales.shipping,
-      department: sales.department,
-      category: sales.catgory,
-      productname: sales.productname,
-      brand: sales.brand,
-      sales: sales.sales,
-      date: sales.date,
+      shipping: sale.shipping,
+      department: sale.department,
+      category: sale.catgory,
+      productname: sale.productname,
+      brand: sale.brand,
+      sales: sale.sales,
+      date: sale.date,
 
     };
 
@@ -121,13 +120,13 @@ const App = () => {
   };
 
   const handleCancelClick = () => {
-    setEditContactId(null);
+    setEditSaleIndex(null);
   };
 
-  const handleDeleteClick = (salesIndex) => {
+  const handleDeleteClick = (saleIndex) => {
     const newSales = [...sales];
 
-    const index = sales.findIndex((sales) => sales.index === salesIndex);
+    const index = sales.findIndex((sale) => sales.index === saleIndex);
 
     newSales.splice(index, 1);
 
@@ -151,9 +150,9 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {sales.map((sales) => (
+            {sales.map((sale) => (
               <Fragment>
-                {editSalesIndex === sales.index ? (
+                {editSaleIndex === sales.index ? (
                   <EditableRow
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}

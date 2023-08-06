@@ -1,24 +1,24 @@
 import React from "react";
 
-const ReadOnlyRow = ({ sales, handleEditClick, handleDeleteClick }) => {
+const ReadOnlyRow = ({ sale, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
-      <td>{contact.shipping}</td>
-      <td>{contact.deaprtment}</td>
-      <td>{contact.category}</td>
-      <td>{contact.productname}</td>
-      <td>{contact.brand}</td>
-      <td>{contact.sales}</td>
-      <td>{contact.date}</td>
+      <td>{sale.shipping}</td>
+      <td>{sale.deaprtment}</td>
+      <td>{sale.category}</td>
+      <td>{sale.productname}</td>
+      <td>{sale.brand}</td>
+      <td>{sale.sales}</td>
+      <td>{sale.date}</td>
 
       <td>
         <button
           type="button"
-          onClick={(event) => handleEditClick(event, sales)}
+          onClick={(event) => handleEditClick(event, sale)}
         >
           Edit
         </button>
-        <button type="button" onClick={() => handleDeleteClick(sales.index)}>
+        <button type="button" onClick={() => handleDeleteClick(sale.index)}>
           Delete
         </button>
       </td>
