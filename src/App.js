@@ -82,7 +82,7 @@ const App = () => {
     event.preventDefault();
 
     const editedSales = {
-      index: editSalesindex,
+      index: editSalesIndex,
       shipping: editFormData.shipping,
       category: editFormData.category,
       productname: editFormData.productname,
@@ -96,13 +96,13 @@ const App = () => {
 
     const index = sales.findIndex((sales) => sales.idex === editSalesIndex);
 
-    newContacts[index] = editedSales;
+    newSales[index] = editedSales;
 
     setSales(newSales);
-    setEditSalesIdex(null);
+    setEditSalesIndex(null);
   };
 
-  const handleEditClick = (event, contact) => {
+  const handleEditClick = (event, sales) => {
     event.preventDefault();
     setEditSalesIndex(sales.index);
 
@@ -151,7 +151,7 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {contacts.map((sales) => (
+            {sales.map((sales) => (
               <Fragment>
                 {editSalesIndex === sales.index ? (
                   <EditableRow
@@ -161,7 +161,7 @@ const App = () => {
                   />
                 ) : (
                   <ReadOnlyRow
-                    contact={sales}
+                    sales={sales}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
                   />
