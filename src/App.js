@@ -8,17 +8,30 @@ import EditableRow from "./components/EditableRow";
 const App = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
-    fullName: "",
-    address: "",
-    phoneNumber: "",
+    shipping: "",
+    department: "",
+    category: "",
     email: "",
+    category: '',
+    productName: "",
+    brand: "",
+    sales: "",
+    date: '',
+
+
+
   });
 
   const [editFormData, setEditFormData] = useState({
-    fullName: "",
-    address: "",
-    phoneNumber: "",
+    shipping: "",
+    department: "",
+    category: "",
     email: "",
+    category: '',
+    productName: "",
+    brand: "",
+    sales: "",
+    date: '',
   });
 
   const [editContactId, setEditContactId] = useState(null);
@@ -50,27 +63,33 @@ const App = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
-    const newContact = {
-      id: nanoid(),
-      fullName: addFormData.fullName,
-      address: addFormData.address,
-      phoneNumber: addFormData.phoneNumber,
-      email: addFormData.email,
+    const newSales = {
+      index: nanoid(),
+      shipping: addFormData.shipping,
+      category: addFormData.category,
+      productname: addFormData.productname,
+      brand: addFormData.brand,
+      sales: addFormData.sales,
+      date: addFormData.date,
+
     };
 
-    const newContacts = [...contacts, newContact];
-    setContacts(newContacts);
+    const newContacts = [...sales, newSales];
+    setSales(newSales);
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedContact = {
-      id: editContactId,
-      fullName: editFormData.fullName,
-      address: editFormData.address,
-      phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email,
+    const editedSales = {
+      index: editSalesindex,
+      shipping: editFormData.shipping,
+      category: editFormData.category,
+      productname: editFormData.productname,
+      brand: editFormData.brand,
+      sales: editFormData.sales,
+      date: editFormData.date,
+
     };
 
     const newContacts = [...contacts];
