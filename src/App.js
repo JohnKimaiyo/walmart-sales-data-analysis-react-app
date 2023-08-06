@@ -6,7 +6,7 @@ import ReadOnlyRow from "./components/ReadOnlyRow";
 import EditableRow from "./components/EditableRow";
 
 const App = () => {
-  const [contacts, setContacts] = useState(data);
+  const [sales, setSales] = useState(data);
   const [addFormData, setAddFormData] = useState({
     shipping: "",
     department: "",
@@ -34,7 +34,7 @@ const App = () => {
     date: '',
   });
 
-  const [editContactId, setEditContactId] = useState(null);
+  const [editSalesIndex, setEditSalesId] = useState(null);
 
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -92,25 +92,29 @@ const App = () => {
 
     };
 
-    const newContacts = [...contacts];
+    const newSales = [...sales];
 
-    const index = contacts.findIndex((contact) => contact.id === editContactId);
+    const index = sales.findIndex((sales) => sales.idex === editSalesIndex);
 
-    newContacts[index] = editedContact;
+    newContacts[index] = editedSales;
 
-    setContacts(newContacts);
-    setEditContactId(null);
+    setSales(newSales);
+    setEditSalesIdex(null);
   };
 
   const handleEditClick = (event, contact) => {
     event.preventDefault();
-    setEditContactId(contact.id);
+    setEditSalesIndex(sales.index);
 
     const formValues = {
-      fullName: contact.fullName,
-      address: contact.address,
-      phoneNumber: contact.phoneNumber,
-      email: contact.email,
+      shipping: sales.shipping,
+      department: sales.department,
+      category: sales.catgory,
+      productname: sales.productname,
+      brand: sales.brand,
+      sales: sales.sales,
+      date: sales.date,
+
     };
 
     setEditFormData(formValues);
@@ -120,14 +124,14 @@ const App = () => {
     setEditContactId(null);
   };
 
-  const handleDeleteClick = (contactId) => {
-    const newContacts = [...contacts];
+  const handleDeleteClick = (salesIndex) => {
+    const newSales = [...sales];
 
-    const index = contacts.findIndex((contact) => contact.id === contactId);
+    const index = sales.findIndex((sales) => sales.index === salesIndex);
 
-    newContacts.splice(index, 1);
+    newSales.splice(index, 1);
 
-    setContacts(newContacts);
+    setSales(newSales);
   };
 
   return (
@@ -136,17 +140,20 @@ const App = () => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Actions</th>
+              <th>Shipping</th>
+              <th>Department</th>
+              <th>Category</th>
+              <th>Product Name</th>
+              <th>Brand</th>
+              <th>Sales</th>
+              <th>Date</th>
+
             </tr>
           </thead>
           <tbody>
-            {contacts.map((contact) => (
+            {contacts.map((sales) => (
               <Fragment>
-                {editContactId === contact.id ? (
+                {editSalesIndex === sales.index ? (
                   <EditableRow
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
@@ -154,7 +161,7 @@ const App = () => {
                   />
                 ) : (
                   <ReadOnlyRow
-                    contact={contact}
+                    contact={sales}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
                   />
@@ -165,34 +172,48 @@ const App = () => {
         </table>
       </form>
 
-      <h2>Add a Contact</h2>
+      <h2>Add Sales</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
-          type="text"
-          name="fullName"
+          type="number"
+          name="shipping"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Enter shipping..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="address"
+          name="department"
           required="required"
-          placeholder="Enter an addres..."
+          placeholder="Enter department..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="phoneNumber"
+          name="category"
           required="required"
-          placeholder="Enter a phone number..."
+          placeholder="Enter category..."
           onChange={handleAddFormChange}
         />
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="productname"
           required="required"
-          placeholder="Enter an email..."
+          placeholder="Enter productname..."
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="brand"
+          required="required"
+          placeholder="Enter brand..."
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="number"
+          name="sales"
+          required="required"
+          placeholder="Enter sales amount..."
           onChange={handleAddFormChange}
         />
         <button type="submit">Add</button>
