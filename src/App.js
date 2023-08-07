@@ -6,13 +6,13 @@ import ReadOnlyRow from "./components/EdittableRow";
 import EditableRow from "./components/ReadOnlyRows";
 
 const App = () => {
-  const [sales, setSales] = useState(data);
+  const [walmart, setWalmart] = useState(data);
   const [addFormData, setAddFormData] = useState({
     shipping: "",
     department: "",
     category: "",
-    
-   
+
+
     productname: "",
     brand: "",
     sales: "",
@@ -26,7 +26,7 @@ const App = () => {
     shipping: "",
     department: "",
     category: "",
-    
+
     productname: "",
     brand: "",
     sales: "",
@@ -62,8 +62,8 @@ const App = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
-    const newSale = {
-      index: nanoid(),
+    const newWalmart = {
+      id: nanoid(),
       shipping: addFormData.shipping,
       category: addFormData.category,
       productname: addFormData.productname,
@@ -73,15 +73,15 @@ const App = () => {
 
     };
 
-    const newSales = [...sales, newSale];
-    setSales(newSales);
+    const newWalmarts = [...walmart, newWalmarts];
+    setWalmarts(newWalmarts);
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedSale = {
-      index: editSaleIndex,
+    const editeWalmart = {
+      id: editWalmartId,
       shipping: editFormData.shipping,
       category: editFormData.category,
       productname: editFormData.productname,
@@ -91,28 +91,28 @@ const App = () => {
 
     };
 
-    const newSales = [...sales];
+    const newWalamrt = [...walmart];
 
-    const index = sales.findIndex((sale) => sale.index === editSaleIndex);
+    const index = walmarts.findIndex((walmart) => walamrt.id === editWalamrtId);
 
-    newSales[index] = editedSale;
+    newWalmarts[index] = editedWalmart;
 
-    setSales(newSales);
-    setEditSaleIndex(null);
+    setWalmarts(newWalmarts);
+    setEditWlamartsId(null);
   };
 
-  const handleEditClick = (event, sale) => {
+  const handleEditClick = (event, walmart) => {
     event.preventDefault();
-    setEditSaleIndex(sales.index);
+    setEditSaleIndex(Walmart.id);
 
     const formValues = {
-      shipping: sale.shipping,
-      department: sale.department,
-      category: sale.catgory,
-      productname: sale.productname,
-      brand: sale.brand,
-      sales: sale.sales,
-      date: sale.date,
+      shipping: walmart.shipping,
+      department: walmartdepartment,
+      category: walmart.catgory,
+      productname: walmart.productname,
+      brand: walmart.brand,
+      sales: walmart.sales,
+      date: walmart.date,
 
     };
 
@@ -123,14 +123,14 @@ const App = () => {
     setEditSaleIndex(null);
   };
 
-  const handleDeleteClick = (saleIndex) => {
-    const newSales = [...sales];
+  const handleDeleteClick = (walmartId) => {
+    const newSales = [...walmarts];
 
-    const index = sales.findIndex((sale) => sales.index === saleIndex);
+    const index = sales.findIndex((walmart) =>walmart.index === saleIndex);
 
-    newSales.splice(index, 1);
+    newwalmart.splice(index, 1);
 
-    setSales(newSales);
+    setwalmart(newwalmart);
   };
 
   return (
@@ -150,9 +150,9 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {sales.map((sale) => (
+            {walmart.map((sale) => (
               <Fragment>
-                {editSaleIndex === sales.index ? (
+                {editwalmartIndex === walmart.index ? (
                   <EditableRow
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
@@ -160,7 +160,7 @@ const App = () => {
                   />
                 ) : (
                   <ReadOnlyRow
-                    sales={sales}
+                    sales={walmart}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
                   />

@@ -40,7 +40,7 @@ const EditableRow = ({
       </td>
       <td>
         <input
-          type="email"
+          type="text"
           required="required"
           placeholder="Enter productname..."
           name="productname"
@@ -50,7 +50,7 @@ const EditableRow = ({
       </td>
       <td>
         <input
-          type="email"
+          type="text"
           required="required"
           placeholder="Enter brand..."
           name="brand"
@@ -60,7 +60,7 @@ const EditableRow = ({
       </td>
       <td>
         <input
-          type="email"
+          type="text"
           required="required"
           placeholder="Enter sales..."
           name="sales"
@@ -70,7 +70,7 @@ const EditableRow = ({
       </td>
       <td>
         <input
-          type="email"
+          type="text"
           required="required"
           placeholder="Enter date..."
           name="date"
