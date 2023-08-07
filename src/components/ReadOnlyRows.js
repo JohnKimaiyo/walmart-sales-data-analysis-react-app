@@ -9,7 +9,7 @@ const ReadOnlyRow = ({ walmart, handleEditClick, handleDeleteClick }) => {
       <td>{walmart.productname}</td>
       <td>{walmart.brand}</td>
       <td>{walmart.sales}</td>
-      <td>{walmartdate}</td>
+      <td>{walmart.date}</td>
 
       <td>
         <button
